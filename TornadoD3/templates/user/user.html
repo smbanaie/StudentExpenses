@@ -1,0 +1,124 @@
+{% extends '../admin/admin.html' %}
+{% block top_menu %}
+<ul class="nav navbar-nav pull-right">
+
+
+				<!-- END TODO DROPDOWN -->
+				<!-- BEGIN USER LOGIN DROPDOWN -->
+				<li class="dropdown user">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<img src="../static/upload/user_images/{{user['picture_address']}}" style="width: 30px; height: 30px;"/>
+					<span id="name_user_top" class="username">{{user['name']}}</span>
+					<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/profile"><i class="fa fa-user"></i> پروفایل </a></li>
+						<li><a href="/admin/note"><i class="fa fa-comment"></i>یادداشت ها</a></li>
+						<li class="divider"></li>
+						<li><a href="javascript:;" id="trigger_fullscreen"><i class="fa fa-move"></i> تمام صفحه</a></li>
+						<li><a href="/logout"><i class="fa fa-power-off"></i> خروج</a></li>
+					</ul>
+				</li>
+				<!-- END USER LOGIN DROPDOWN -->
+			</ul>
+{% end block top_menu %}
+
+{% block sidbar %}
+
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<ul class="page-sidebar-menu">
+				<li>
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler hidden-phone"></div>
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+				</li>
+				<li>
+
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+					<form class="sidebar-search" action="extra_search.html" method="POST">
+						<div class="form-container">
+							<div class="input-box">
+								<a href="javascript:;" class="remove"></a>
+								<input type="text" placeholder="جستجو..."/>
+								<input type="button" class="submit" value=" "/>
+							</div>
+						</div>
+					</form>
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+				</li>
+				<li class="start active">
+					<a href="#">
+					<i class="fa fa-home"></i>
+					<span class="title"> داشبورد </span>
+					<span class="selected"></span>
+					</a>
+				</li>
+
+				<li class="tooltips">
+					<a href="/user/bill">
+					<i class="fa fa-list-alt"></i>
+					<span class="title"> صورت حساب </span>
+					</a>
+				</li>
+
+				<li class="tooltips">
+					<a href="/user/tinyconsumption">
+					<i class="fa fa-list"></i>
+					<span class="title"> ریز مصرف  </span>
+					</a>
+				</li>
+
+				<li class="tooltips">
+					<a href="/user/registerbuy">
+					<i class="fa fa-shopping-cart"></i>
+					<span class="title"> ثبت خرید </span>
+
+					</a>
+				</li>
+
+                <li class="tooltips">
+					<a href="/user/note">
+					<i class="fa fa-comment"></i>
+					<span class="title"> یادداشت ها </span>
+					</a>
+				</li>
+
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+
+		{% end block sidbar %}
+	{% block content %}
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="row">
+				<div class="col-md-12">
+
+					<ul class="page-breadcrumb breadcrumb">
+
+						<li>
+							<i class="fa fa-angle-left"></i>
+							<a href="#"> داشبورد </a></li>
+						<li class="pull-right">
+
+
+								<i class="fa fa-calendar"></i>
+								<span>{{date}}</span>
+						</li>
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+				<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<img src="../../static/Admin/img/01.jpg">
+
+				</div>
+
+			</div>
+			</div>
+
+
+			</div>
+		</div>
+	{% end block content %}

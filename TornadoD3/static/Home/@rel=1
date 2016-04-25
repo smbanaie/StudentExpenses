@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Cleany - Minimalistic Landing Page</title>
+	<meta name="author" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">		
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">		
+	
+	<!-- Libs CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/simple-line-icons.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" media="all" />
+	
+	<!-- Template CSS -->
+	<link href="css/style.css" rel="stylesheet"> 
+
+	<!-- Google Fonts -->
+	<link href='../../fonts.googleapis.com/css@family=Raleway_3A400,700,800&subsetting=all' rel='stylesheet' type='text/css'>
+	<link href='../../fonts.googleapis.com/css@family=Open+Sans_3A400italic,400,800,700,300' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.js"></script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	
+</head>
+
+<body data-spy="scroll" data-target=".navigation">
+	
+	<!-- Banner -->	
+    <div id="banner" class="bg-blur">
+		<!-- Start Header -->
+		<div id="header">
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Start Logo / Text -->
+						<a class="navbar-brand text-logo" href="#"><i class="icon-rocket blue"></i>Cleany</a>
+						<!-- End Logo / Text -->
+					</div>
+					<!-- Start Navigation -->
+					<div class="navigation navbar-collapse collapse">
+						<ul class="nav navbar-nav menu-right">
+							<li class="active"><a href="#banner">Home</a></li>
+							<li><a href="#intro">Intro</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#features">Features</a></li>
+							<li><a href="#pricing">Price</a></li>
+							<li><a href="#faq">FAQ</a></li>
+						</ul>
+					</div>
+					<!-- End Navigation  -->
+				</div>
+			</nav>
+		</div>
+		<!-- End Header -->
+		<div class="banner-content">
+			<div class="container">
+				<div class="row">
+					<!-- Start Header Text -->
+					<div class="col-md-7 col-sm-7">
+						<h1><strong>Increase</strong> Conversion Rates</h1>
+						<p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Praesent sapien massa.</p>
+						<p>Donec sollicitudin molestie malesuada quis lorem ut libero malesuada feugiat.</p>
+						<ul class="banner-list">
+							<li><i class="fa fa-check"></i>Many addon features</li>
+							<li><i class="fa fa-check"></i>Fully responsive &amp; adaptive</li>
+							<li><i class="fa fa-check"></i>SEO optimized</li>
+							<li><i class="fa fa-check"></i>Easy way to capture leads</li>
+							<li><i class="fa fa-check"></i>Client oriented</li>
+						</ul>
+					</div>
+					<!-- End Header Text -->
+					<!-- Start Banner Optin Form-->
+					<div class="col-lg-4 col-md-4 col-md-offset-1 col-sm-5">
+						<div class="banner-form">
+							<div class="form-title">
+								<h2>Start your FREE trial</h2>
+							</div>
+							<div class="form-body">
+								<p>To stay tuned to our updates, enter Your Name and Email Address!</p>
+								<form id="banner-form" class="form" method="post" action="form.php">
+									<div class="form-group">
+										<input name="banner-name" id="banner-name" type="text" class="form-control" required placeholder="Your Name">
+									</div>
+									<div class="form-group">
+										<input name="banner-email" id="banner-email" type="text" class="form-control" required placeholder="Your E-mail">
+									</div>
+									<button type="submit" class="btn btn-default btn-submit">Subscribe</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- End Banner Optin Form -->
+				</div>
+			</div>
+		</div>
+    </div>
+	<!-- End Banner -->
+	
+	<!-- Clients Logo -->
+	<div id="clients" class="padding40 bg-grey hidden-xs">
+		<div class="container">
+			<ul class="list-inline clients-logo text-center">
+				<li><img src="img/logo1.png" alt="" title="" /></li><!--Image path of logo -->
+				<li><img src="img/logo2.png" alt="" title="" /></li>
+				<li><img src="img/logo3.png" alt="" title="" /></li>
+				<li><img src="img/logo1.png" alt="" title="" /></li>
+				<li><img src="img/logo2.png" alt="" title="" /></li>
+			</ul>
+		</div>
+	</div>
+	<!-- End Clients Logo -->
+	
+	<!-- Intro -->
+	<section id="intro" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 headline">
+					<h2>A simple <span class="blue">minimalistic</span> landing page!</h2>
+					<p>Lorem ipsum dolor elit sed sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-5 col-md-5">
+					<img src="img/inclined.png" class="img-responsive" alt="" title="">
+				</div>
+				<div class="col-lg-6 col-md-6 col-md-offset-1">
+					<div class="features"><!-- Main Points -->
+						<i class="line-font blue icon-shield"></i><!-- Main Point Icon -->
+						<h3>Client Oriented</h3><!-- Main Title -->
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><!-- Main Text -->
+					</div><!-- End Main Points -->
+					<div class="features">
+						<i class="line-font blue icon-bubbles"></i>
+						<h3>Easy way to capture leads</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+					<div class="features">
+						<i class="line-font blue icon-bar-chart"></i>
+						<h3>Easy Adaptable</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+				</div>
+			</div>
+			<hr class="separator60"><!-- Separator -->
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Easy flow of content</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <strong>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</strong>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Ut ad minim veniam.</p>
+					<p>Vestibulum ante ipsum primis in faucibus orci luctus etel ultrices posuere cubilia Curae.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img src="img/imac2.png" class="img-responsive" alt="" title="">
+				</div>
+			</div>
+			<hr class="separator60">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="img/devices.png" class="img-responsive" alt="" title="">
+				</div>
+				<div class="col-md-6">
+					<div class="margintop">
+						<h2>List of Numerous Advantages</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <strong>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</strong>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+						<ul class="green-arrow"><!--Green arrow list -->
+							<li>Many addon features</li>
+							<li>Fully responsive &amp; adaptive</li>
+							<li>SEO optimized</li>
+							<li>Attractive with a modern touch</li>
+							<li>Full Support</li>
+						</ul>
+						<p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Intro -->
+	
+	<!-- How It Works -->
+	<section id="how-it-works" class="section bg-blue-pattern white-text">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="headline">
+						<h2>How it works</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquando posse.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5">
+					<!-- How It Works List -->
+					<ul class="steps-list">
+						<li>
+							<span>1</span><!-- Step Number -->
+							<h4>Curabitur risus mi accumsan vitae</h4><!-- Step Title -->
+							<p>Vestibulum ante ipsum primis in faucibus orci luctus etel ultrices posuere cubilia Curae.</p><!-- Step Description -->
+						</li>
+						<li>
+							<span>2</span>
+							<h4>Sed id dignissim lorem consequat</h4>
+							<p>Nunc eu lacus massa, et accumsan erat. Phasellus auct malesuada odio, eu aliquet mi rhoncus quis.</p>
+						</li>
+						<li>
+							<span>3</span>
+							<h4>Nam at imperdiet quam aenean </h4>
+							<p>Proin viverra, felis eget feugiat dignissim, ante ante odio pulvinar, sed blandit diam lectus a risus.</p>
+						</li>
+						<li>
+							<span>4</span>
+							<h4>Aliquam malesuada arcu eu tortor</h4>
+							<p>Mauris congue, tortor non consequat laoreet, ipsum ma facilisis tellus, ut vulputate sem.</p>
+						</li>
+					</ul>					
+					<!-- End How It Works List -->
+				</div>
+				<div class="col-md-7">
+					<div class="video-container">
+						<iframe src="../../player.vimeo.com/video/75188030"></iframe> <!-- Responsive video iframe -->
+					</div>
+				</div>	
+			</div>
+		</div>
+	</section>
+	<!-- End How it Works -->	
+	
+	<!-- Portfolio -->
+    <section id="portfolio" class="section bg-grey arrow-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="headline">
+						<h2>Our Work</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquando posse.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<!-- Start Portfolio Item -->
+					<div class="hover-details">
+						<img class="img-responsive img-thumbnail" src="img/thumb.png" alt="" title="" /><!-- Image Thumbnail  -->
+						<div class="img-cover">
+							<a href="img/thumb.png" class="img-zoom" data-gal="prettyPhoto"><i class="icon-magnifier"></i></a><!-- Large Image  -->
+							<h3>Item Description</h3><!-- Image Description  -->
+						</div>
+					</div>
+					<!-- End Portfolio Item  -->
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<!-- Start Portfolio Item -->
+					<div class="hover-details">
+						<img class="img-responsive img-thumbnail" src="img/thumb.png" alt="" title="" /><!-- Image Thumbnail  -->
+						<div class="img-cover">
+							<a href="img/thumb.png" class="img-zoom" data-gal="prettyPhoto"><i class="icon-magnifier"></i></a><!-- Large Image  -->
+							<h3>Item Description</h3><!-- Image Description  -->
+						</div>
+					</div>
+					<!-- End Portfolio Item  -->
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<!-- Start Portfolio Item -->
+					<div class="hover-details">
+						<img class="img-responsive img-thumbnail" src="img/thumb.png" alt="" title="" /><!-- Image Thumbnail  -->
+						<div class="img-cover">
+							<a href="img/thumb.png" class="img-zoom" data-gal="prettyPhoto"><i class="icon-magnifier"></i></a><!-- Large Image  -->
+							<h3>Item Description</h3><!-- Image Description  -->
+						</div>
+					</div>
+					<!-- End Portfolio Item  -->
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<!-- Start Portfolio Item -->
+					<div class="hover-details">
+						<img class="img-responsive img-thumbnail" src="img/thumb.png" alt="" title="" /><!-- Image Thumbnail  -->
+						<div class="img-cover">
+							<a href="img/thumb.png" class="img-zoom" data-gal="prettyPhoto"><i class="icon-magnifier"></i></a><!-- Large Image  -->
+							<h3>Item Description</h3><!-- Image Description  -->
+						</div>
+					</div>
+					<!-- End Portfolio Item  -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<!-- Start Portfolio Item -->
+					<div class="hover-details">
+						<img class="img-responsive img-thumbnail" src="img/thumb.png" alt="" title="" /><!-- Image Thumbnail  -->
+						<div class="img-cover">
+							<a href="img/thumb.png" class="img-zoom" data-gal="prettyPhoto"><i class="icon-magnifier"></i></a><!-- Large Image  -->
+							<h3>Item Description</h3><!-- Image Description  -->
+						</div>
+					</div>
+					<!-- End Portfolio Item  -->
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<!-- Start Portfolio Item -->
+					<div class="hover-details">
+						<img class="img-responsive img-thumbnail" src="img/thumb.png" alt="" title="" /><!-- Image Thumbnail  -->
+						<div class="img-cover">
+							<a href="img/thumb.png" class="img-zoom" data-gal="prettyPhoto"><i class="icon-magnifier"></i></a><!-- Large Image  -->
+							<h3>Item Description</h3><!-- Image Description  -->
+						</div>
+					</div>
+					<!-- End Portfolio Item  -->
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<!-- Start Portfolio Item -->
+					<div class="hover-details">
+						<img class="img-responsive img-thumbnail" src="img/thumb.png" alt="" title="" /><!-- Image Thumbnail  -->
+						<div class="img-cover">
+							<a href="img/thumb.png" class="img-zoom" data-gal="prettyPhoto"><i class="icon-magnifier"></i></a><!-- Large Image  -->
+							<h3>Item Description</h3><!-- Image Description  -->
+						</div>
+					</div>
+					<!-- End Portfolio Item  -->
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<!-- Start Portfolio Item -->
+					<div class="hover-details">
+						<img class="img-responsive img-thumbnail" src="img/thumb.png" alt="" title="" /><!-- Image Thumbnail  -->
+						<div class="img-cover">
+							<a href="img/thumb.png" class="img-zoom" data-gal="prettyPhoto"><i class="icon-magnifier"></i></a><!-- Large Image  -->
+							<h3>Item Description</h3><!-- Image Description  -->
+						</div>
+					</div>
+					<!-- End Portfolio Item  -->
+				</div>
+			</div>		
+		</div>
+	</section>
+	<!-- End Portfolio -->
+
+	<!-- Features -->
+    <section id="features" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="headline">
+						<h2>Features</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquando posse.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 features"><!-- Start Feature -->
+					<i class="line-font blue icon-speech"></i><!-- Feature Icon -->
+					<h3>Easily adaptable</h3><!-- Feature Title -->
+					<p>Nullam mo  arcu ac molestie scelerisqu vulputate molestie mpus ipsum.</p><!-- Feature Text -->
+				</div><!-- End Feature -->
+				<div class="col-md-4 col-sm-4 features">
+					<i class="line-font blue icon-envelope"></i>
+					<h3>Fully Responsive</h3>
+					<p>Nullam mo  arcu ac molestie scelerisqu vulputate molestie mpus ipsum.</p>
+				</div>
+				<div class="col-md-4 col-sm-4 features">
+					<i class="line-font blue icon-pie-chart"></i>
+					<h3>Multipurpose</h3>
+					<p>Nullam mo  arcu ac molestie scelerisqu vulputate molestie mpus ipsum.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 features">
+					<i class="line-font blue icon-map"></i>
+					<h3>Minimalistic</h3>
+					<p>Nullam mo  arcu ac molestie scelerisqu vulputate molestie mpus ipsum.</p>
+				</div>
+				<div class="col-md-4 col-sm-4 features">
+					<i class="line-font blue icon-call-out"></i>
+					<h3>24/7 Support</h3>
+					<p>Nullam mo  arcu ac molestie scelerisqu vulputate molestie mpus ipsum.</p>
+				</div>
+				<div class="col-md-4 col-sm-4 features">
+					<i class="line-font blue icon-reload"></i>
+					<h3>Documentataion</h3>
+					<p>Nullam mo  arcu ac molestie scelerisqu vulputate molestie mpus ipsum.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 features">
+					<i class="line-font blue icon-lock"></i>
+					<h3>Line Icons</h3>
+					<p>Nullam mo  arcu ac molestie scelerisqu vulputate molestie mpus ipsum.</p>
+				</div>
+				<div class="col-md-4 col-sm-4 features">
+					<i class="line-font blue icon-bar-chart"></i>
+					<h3>Assured Revenue</h3>
+					<p>Nullam mo  arcu ac molestie scelerisqu vulputate molestie mpus ipsum.</p>
+				</div>
+				<div class="col-md-4 col-sm-4 features">
+					<i class="line-font blue icon-layers"></i>
+					<h3>Hotline</h3>
+					<p><strong>1-234-567-890 - </strong> Plestie scelerisqu vulputate molestie ligula gravida .</p>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-12">
+					<img src="img/apple.png" class="img-responsive" alt="" title="" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End Features -->
+	
+	<!-- Three Main Points -->
+	<section id="three-main" class="section bg-blue-pattern white-text">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="headline">
+						<h2>Tailored For Your Needs</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquando posse.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-4">
+					<div class="main-point"><!-- Main Point -->
+						<i class="line-font icon-briefcase"></i><!-- Main Point Icon -->
+						<h3>Client Oriented</h3><!-- Main Point Title -->
+						<p>Lorem ipsum dolor sit amet, magna consectetur adipisicing elit, sed do eiusmod incididunt. </p><!-- Main Point Text -->
+					</div><!-- End Main Point -->
+				</div>
+				<div class="col-md-4">
+					<div class="main-point">
+						<i class="line-font icon-graph"></i>
+						<h3>Custom Icons</h3>
+						<p>Lorem ipsum dolor sit amet, magna consectetur adipisicing elit, sed do eiusmod incididunt. </p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="main-point">
+						<i class="line-font icon-globe"></i>
+						<h3>Easy Flow</h3>
+						<p>Lorem ipsum dolor sit amet, magna consectetur adipisicing elit, sed do eiusmod incididunt. </p>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<!--End Three Main Points -->
+	
+	<!--Testimonials -->
+	<section id="testimonials" class="section bg-testimonial cover border-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="headline">
+						<h2>Testimonials</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquando posse.</p>
+					</div>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<!-- Start Testimonial Slider -->
+					<div class="carousel slide carousel-mod" data-ride="carousel" id="testimonial">
+						<div class="carousel-inner">
+							<!-- Testimonial #1  -->
+							<div class="item active">
+								<div class="testimonial-inner">
+									<img src="img/testi.jpg" alt="" title="" /><!-- Testimonial Image  -->
+									<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra.</p><!-- Tesimonial  -->
+									<small>Sarah Mcgrit - CEO Knowhere</small><!-- Testimonial Author  -->
+								</div>
+							</div>
+							<!-- End Testimonial #1  -->
+							<div class="item">
+								<div class="testimonial-inner">
+									<img src="img/testi.jpg" alt="" title="" /><!-- Testimonial Image  -->
+									<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra.</p><!-- Tesimonial  -->
+									<small>Lucas Arthur </small><!-- Testimonial Author  -->
+								</div>
+							</div>				
+							<div class="item">
+								<div class="testimonial-inner">
+									<img src="img/testi.jpg" alt="" title="" /><!-- Testimonial Image  -->
+									<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra.</p><!-- Tesimonial  -->
+									<small>Someone famous</small><!-- Testimonial Author  -->
+								</div>
+							</div>					
+						</div>
+						<!-- Testimonial Navigation  -->
+						<ol class="carousel-indicators">
+							<li data-target="#testimonial" data-slide-to="0" class="active"></li>
+							<li data-target="#testimonial" data-slide-to="1"></li>
+							<li data-target="#testimonial" data-slide-to="2"></li>
+						</ol>
+						<!-- End Testimonial Navigation  -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Testimonials -->
+	
+	<!-- Pricing -->
+	<section id="pricing" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="headline">
+						<h2>Pricing</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquando posse.</p>
+					</div>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="panel price-plan">
+						<div class="panel-heading">
+							<h4>Silver Package</h4><!-- Package Title -->
+						</div>
+						<div class="panel-body">
+							<h3>$14<sup>.99</sup> <span>/ month</span></h3><!-- Price -->
+						</div>
+						<ul class="list-group"><!-- Package Features -->
+							<li class="list-group-item">Personal use</li>
+							<li class="list-group-item">Page Builder</li>
+							<li class="list-group-item"><del>Addon Package</del></li>
+							<li class="list-group-item"><del>Video Bonus</del></li>
+							<li class="list-group-item">27/7 support</li>
+						</ul><!-- End Package Features -->
+						<div class="panel-footer text-center">
+							<a href="#" class="btn btn-transparent btn-price">Add to Cart</a><!-- Package Button -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="panel price-plan popular">
+						<div class="panel-heading">
+							<h4>Gold Package</h4><!-- Package Title -->
+						</div>
+						<div class="panel-body">
+							<h3>$99<sup>.99</sup> <span>/ month</span></h3><!-- Price -->
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item">Personal use</li>
+							<li class="list-group-item">Page Builder</li>
+							<li class="list-group-item">Addon Package</li>
+							<li class="list-group-item">Video Bonus</li>
+							<li class="list-group-item">27/7 support</li>
+						</ul>
+						<div class="panel-footer text-center">
+							<a href="#" class="btn btn-transparent btn-price">Add to Cart</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="panel price-plan">
+						<div class="panel-heading">
+							<h4>Silver Package</h4><!-- Package Title -->
+						</div>
+						<div class="panel-body">
+							<h3>$129<sup>.99</sup> <span>/ month</span></h3><!-- Price -->
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item">Personal use</li>
+							<li class="list-group-item">Page Builder</li>
+							<li class="list-group-item"><del>Addon Package</del></li>
+							<li class="list-group-item">Video Bonus</li>
+							<li class="list-group-item">27/7 support</li>
+						</ul>
+						<div class="panel-footer text-center">
+							<a href="#" class="btn btn-transparent btn-price">Add to Cart</a>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</section>
+	<!-- End Pricing -->
+	
+	<!-- FAQ -->
+	<section id="faq" class="section bg-grey  arrow-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="headline">
+						<h2>Frequently Asked Questions</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquando posse.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="faq-body"><!-- FAQ -->
+						<i class="line-font blue icon-question"></i><!-- Question Mark Icon -->
+						<h4>Can I buy this template and sell it ?</h4><!-- Question -->
+						<div class="answer"><!-- Answer -->
+							<p>It actually depends on the license.</p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+						</div>
+					</div><!-- End FAQ -->
+					<div class="faq-body"><!-- FAQ -->
+						<i class="line-font blue icon-question"></i><!-- Question Mark Icon -->
+						<h4>What's the guarantee period ?</h4><!-- Question -->
+						<div class="answer"><!-- Answer -->
+							<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+						</div>
+					</div><!-- End FAQ -->
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="faq-body"><!-- FAQ -->
+						<i class="line-font blue icon-question"></i><!-- Question Mark Icon -->
+						<h4>Why not use an accordion ?</h4><!-- Question -->
+						<div class="answer"><!-- Answer -->
+							<p><strong>Not everyone like accordions and it's easier to read it this way</strong></p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+						</div><!-- End FAQ -->
+					</div>
+					<div class="faq-body"><!-- FAQ -->
+						<i class="line-font blue icon-question"></i><!-- Question Mark Icon -->
+						<h4>What is the refund policy ?</h4><!-- Question -->
+						<div class="answer"><!-- Answer -->
+							<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+						</div><!-- End FAQ -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+	<!-- End FAQ -->
+		
+	<!-- Call To Action -->
+	<section id="subscribe" class="section bg-blue-pattern">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center white-text">
+					<div class="headline">
+						<h2><strong>Satisfied</strong> with the introduction ?</h2>
+						<p class="subline">Sign up and get our latest updates and product release</p>
+					</div>
+					<a href="#" class="btn btn-transparent btn-big">Get Started</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Call To Action -->
+
+	<!-- Footer Top -->
+	<section class="footer footer-top">
+		<div class="container">
+			<div class="row">
+				<!-- Footer Intro  -->
+				<div class="col-md-4">
+					<h3>Cleany Landing Page</h3>
+					<p>Cleany is a clean and modern Landing Page template designed to fit all needs.</p>
+					<p>Increase your sales today with well placed optin forms accompanied with a fluid flow of content.</p>
+				</div>
+				<!-- End Footer Intro  -->
+				<!-- Contact Details  -->
+				<div class="col-md-3">
+					<div class="contact-info">
+						<h3>Reach Us</h3>
+						<ul class="contact-list">
+							<li><i class="icon-directions"></i> Simplesphere, Mauritius</li>
+							<li><i class="icon-call-in"></i> + 230 5 8268494</li>
+							<li><i class="icon-envelope-open"></i><a href="mailto:contact@simplesphere.net.com">contact@simplesphere.com</a></li>
+						</ul>
+					</div>
+				</div>	
+				<!-- End Contact Details  -->
+				<!-- Quick Links -->
+				<div class="col-md-2">				
+					<h3>Quick Links</h3>
+					<ul class="quick-links">
+						<li><a href="#">Affiliate</a></li>
+						<li><a href="#">Disclaimer</a></li>
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<!-- End Quick links -->
+				<!-- Social Links -->
+				<div class="col-sm-3">
+					<h3>Stay in Touch!</h3>
+					<p>Follow us on our social networks!</p>
+					<ul class="social">
+						<li class="facebook"> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+						<li class="twitter"> <a href="#"> <i class="fa fa-twitter"></i> </a> </li>
+						<li class="google-plus"> <a href="#"> <i class="fa fa-google-plus"></i> </a> </li>
+						<li class="linkedin"> <a href="#"> <i class="fa fa-linkedin"></i> </a> </li>
+						<li class="youtube"> <a href="#"> <i class="fa fa-youtube-play"></i> </a> </li>
+					</ul>
+				</div>
+				<!--End Social Links  -->
+			</div>
+		</div>
+	</section>
+	<!-- End Footer Top -->
+	
+	<!-- Footer Bottom -->	
+	<footer class="footer footer-sub">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-sm-6">
+					<p>&copy; Cleany Theme. All Right Reserved</p>
+				</div>
+				<div class="col-lg-6 col-sm-6">
+					<p class="copyright">Made with <i class="icon-heart"></i> by <a href="../../www.simplesphere.net/default.htm">Simplesphere</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Bottom -->
+
+	<!-- Start Js Files -->
+	<script type="text/javascript" src="../../code.jquery.com/jquery-2.1.0.min.js"></script><!--jQuery is a Javascript library that greatly reduces the amount of code that you must write.-->
+	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-2.1.0.min.js"><\/script>')</script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script><!--Packed with many functionalies such as carousel slider, responsivity, tabs, drop downs, buttons, and many other features-->
+	<script src="js/modernizr.min.js" type="text/javascript"></script><!--Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.-->
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript" ></script><!-- Script for Lightbox Image  -->
+	<script src="js/custom.js" type="text/javascript"></script><!-- Script File containing all customizations  -->
+	<!-- End Js Files  -->
+
+</body>
+</html>

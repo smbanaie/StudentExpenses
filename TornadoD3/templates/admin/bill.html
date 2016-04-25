@@ -1,0 +1,238 @@
+{% extends 'admin.html' %}
+{% block sidbar %}
+<div class="page-sidebar navbar-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul class="page-sidebar-menu">
+        <li>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <div class="sidebar-toggler hidden-phone"></div>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        </li>
+        <li>
+
+            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+            <form class="sidebar-search" action="extra_search.html" method="POST">
+                <div class="form-container">
+                    <div class="input-box">
+                        <a href="javascript:;" class="remove"></a>
+                        <input type="text" placeholder="جستجو..."/>
+                        <input type="button" class="submit" value=" "/>
+                    </div>
+                </div>
+            </form>
+            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+        </li>
+        <li class="start">
+            <a href="/admin">
+                <i class="fa fa-home"></i>
+                <span class="title"> داشبورد </span>
+
+            </a>
+        </li>
+
+        <li class="tooltips">
+            <a href="/admin/payments">
+                <i class="fa fa-credit-card"></i>
+                <span class="title"> پرداخت ها </span>
+            </a>
+        </li>
+
+
+        <li class="">
+            <a href="javascript:;">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="title"> خرید ها </span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="/admin/add_buy">
+                        خرید جدید
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/tinyconsumption">
+                        حذف خرید
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+
+        <li class="tooltips">
+            <a href="/admin/subscribers">
+                <i class="fa fa-user"></i>
+                <span class="title"> مشترکان </span>
+            </a>
+        </li>
+        <li class="tooltips active">
+            <a href="/bill">
+                <i class="fa fa-list-alt"></i>
+                <span class="title"> صورت حساب </span>
+                <span class="selected"></span>
+            </a>
+        </li>
+
+        </li>
+
+        <li class="tooltips">
+            <a href="/admin/tinyconsumption">
+                <i class="fa fa-list"></i>
+                <span class="title"> ریز مصرف  </span>
+            </a>
+        </li>
+
+        </li>
+
+        <li class="tooltips">
+            <a href="/admin/message">
+                <i class="fa fa-envelope"></i>
+                <span class="title">پیام ها</span>
+            </a>
+        </li>
+
+        <li class="tooltips">
+            <a href="/admin/note">
+                <i class="fa fa-comment"></i>
+                <span class="title"> یادداشت ها </span>
+            </a>
+        </li>
+
+    </ul>
+    <!-- END SIDEBAR MENU -->
+</div>
+{% end block sidbar %}
+{% block content %}
+<div class="page-content">
+
+    <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <ul class="page-breadcrumb breadcrumb">
+
+                <li>
+                    <i class="fa fa-angle-left"></i>
+                    <a href="/admin"> داشبورد </a></li>
+                <li class="pull-right">
+                <li>
+                    <i class="fa fa-angle-left"></i>
+                    <a href="#"> صورت حساب </a></li>
+                <li class="pull-right">
+
+                    <i class="fa fa-calendar"></i>
+                    <span>{{date}}</span>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <div class="portlet box green ">
+                <div class="portlet-title">
+                    <div class="caption">
+                        صورت حساب
+                    </div>
+
+                </div>
+                <div class="portlet-body form">
+                    <form class="form-horizontal" id="form_payments" method="post" enctype="multipart/form-data">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"> مشترک : </label>
+
+                                <div class="col-md-4">
+                                    <select onchange="select_user()" id="select" class="form-control" name="payer">
+                                        {% for item in all_user %}
+                                        {% if item.status == 1 or item.status == 3 %}
+                                        <option value="{{item.id}}">{{item.name}}</option>
+                                        {% end if %}
+                                        {% end for %}
+                                    </select>
+                                </div>
+                                <div id="select_user">
+                                    <img src="/static/upload/user_images/{{item.picture_address}}"
+                                         style="width: 35px; height: 35px;"/>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-12">
+                                <table id="user" class="table table-bordered table-striped">
+                                    <tbody>
+                                    <tr>
+                                        <td style="width:15%">پرداخت</td>
+                                        <td id="payment" style="width:50%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>دریافت</td>
+                                        <td id="recive"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>خرج کرد</td>
+                                        <td id="spent"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>مشارکت</td>
+                                        <td id="partnership"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>جمع کل</td>
+                                        <td id="sum"></td>
+                                    </tr>
+                                    <tr>
+                                        <td> وضعیت</td>
+                                        <td id="status"></td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="form-actions fluid">
+                            <div class="col-md-offset-3 col-md-9">
+                                <a href="/admin/payments">
+                                    <button type="button" class="btn green"> تسویه</button>
+                                </a>
+                                <a href="/admin">
+                                    <button type="button" class="btn default"> بازگشت</button>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src='{{static_url("Admin/plugins/jquery-1.10.2.min.js" )}}' type="text/javascript"></script>
+
+<script type="text/javascript">
+    select_user();
+    function select_user() {
+        $.post('/admin/bill', {
+                    user_id: $('#select').val()
+                }, function (data) {
+                    $("#select_user").html('<img src="/static/upload/user_images/' + data['picture_address'] + '" style="width: 35px; height: 35px;"/>');
+                    $("#payment").html(data['payment'] + "    " + "تومان");
+                    $("#recive").html(data['recive'] + "    " + "تومان");
+                    $("#spent").html(data['spent'] + "    " + "تومان");
+                    $("#partnership").html(data['account_user'] + "    " + "تومان");
+                    $("#sum").html(data['sum'] + "    " + "تومان");
+                    $("#status").html(data['status']);
+                }
+        )
+    }
+</script>
+
+{% end block content %}
+

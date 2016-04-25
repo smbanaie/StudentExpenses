@@ -1,0 +1,204 @@
+{% extends 'admin.html' %}
+{% block sidbar %}
+<div class="page-sidebar navbar-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul class="page-sidebar-menu">
+        <li>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <div class="sidebar-toggler hidden-phone"></div>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        </li>
+        <li>
+
+            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+            <form class="sidebar-search" action="extra_search.html" method="POST">
+                <div class="form-container">
+                    <div class="input-box">
+                        <a href="javascript:;" class="remove"></a>
+                        <input type="text" placeholder="جستجو..."/>
+                        <input type="button" class="submit" value=" "/>
+                    </div>
+                </div>
+            </form>
+            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+        </li>
+        <li class="start">
+            <a href="/admin">
+                <i class="fa fa-home"></i>
+                <span class="title"> داشبورد </span>
+
+            </a>
+        </li>
+
+        <li class="tooltips">
+            <a href="/admin/payments">
+                <i class="fa fa-credit-card"></i>
+                <span class="title"> پرداخت ها </span>
+            </a>
+        </li>
+
+
+        <li class="">
+            <a href="javascript:;">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="title"> خرید ها </span>
+                <span class="arrow "></span>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="/admin/add_buy">
+                        خرید جدید
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/tinyconsumption">
+                        حذف خرید
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+
+        <li class="tooltips">
+            <a href="/admin/subscribers">
+                <i class="fa fa-user"></i>
+                <span class="title"> مشترکان </span>
+            </a>
+        </li>
+        <li class="tooltips">
+            <a href="/admin/bill">
+                <i class="fa fa-list-alt"></i>
+                <span class="title"> صورت حساب </span>
+            </a>
+        </li>
+
+        </li>
+
+        <li class="tooltips active">
+            <a href="/#">
+                <i class="fa fa-list"></i>
+                <span class="title"> ریز مصرف  </span>
+                <span class="selected"></span>
+
+            </a>
+        </li>
+
+        </li>
+
+        <li class="tooltips">
+            <a href="/admin/message">
+                <i class="fa fa-envelope"></i>
+                <span class="title"> پیام ها </span>
+            </a>
+        </li>
+
+        <li class="tooltips">
+            <a href="/admin/note">
+                <i class="fa fa-comment"></i>
+                <span class="title"> یادداشت ها </span>
+            </a>
+        </li>
+
+    </ul>
+    <!-- END SIDEBAR MENU -->
+</div>
+{% end block sidbar %}
+
+{% block content %}
+<div class="page-content">
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <ul class="page-breadcrumb breadcrumb">
+
+                <li>
+                    <i class="fa fa-angle-left"></i>
+                    <a href="/admin"> داشبورد </a></li>
+                <li class="pull-right">
+                <li>
+                    <i class="fa fa-angle-left"></i>
+                    <a href="#"> ریز مصرف </a></li>
+                <li class="pull-right">
+
+                    <i class="fa fa-calendar"></i>
+                    <span>{{ date }}</span>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="user" class="table table-bordered table-striped">
+                <tbody>
+                <tr>
+                    <td style="width:4%">کد خرید</td>
+                    <td style="width:4%">تاریخ</td>
+                    <td style="width:4%">کالا</td>
+                    <td style="width:4%">مبلغ</td>
+                    <td style="width:15%">مشترکین در خرید</td>
+                    <td style="width: 3%">حذف</td>
+                </tr>
+                {% for item in list_buy %}
+                <tr id="buy_{{ item['id'] }}">
+                    <td>{{ item['id'] }}</td>
+                    <td>{{ item['date'] }}</td>
+                    <td>{{ item['concern'] }}</td>
+                    <td>{{ item['amount'] }}</td>
+                    <td>{% for j in item['list_user'] %}{{ j+ " / " }}{% end %}</td>
+                    <td>
+                        <button onclick="delete_buy('{{ item['id'] }}')" class="btn-danger"> حذف</button>
+                    </td>
+
+                </tr>
+                {% end for %}
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="col-md-3 col-md-offset-4">
+        <ul class="pagination">
+
+            <li><a href="{{ reverse_url("admin_tinyconsumption", 1) }}">&laquo;</a></li>
+
+            {% for i in range(pagination['total'] // 5) %}
+            <li {% if pagination['current_page'] == i  %}class="active"{% end %}><a href="{{ reverse_url("admin_tinyconsumption", (i+1)) }}">{{ i + 1 }}</a></li>
+            {% end %}
+
+            <li><a href="{{ reverse_url("admin_tinyconsumption", pagination['total'] // 5) }}">&raquo;</a></li>
+
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function delete_buy(buy_id) {
+        swal({
+                    title: "آیا میخواهید حذف شود؟",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "بله!حذف کن",
+                    closeOnConfirm: false
+                },
+                function () {
+                    swal("پاک شد!", "با موفقیت صورت گرفت", "success");
+                    $.post('/admin/delbuy', {
+                        buy_id: buy_id
+                    }, function () {
+
+                        $("#buy_" + buy_id).remove();
+
+
+                    });
+                });
+    }
+</script>
+{% end block content %}
+

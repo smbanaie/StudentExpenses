@@ -1,0 +1,138 @@
+{% extends 'user.html' %}
+{% block sidbar %}
+
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<ul class="page-sidebar-menu">
+				<li>
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler hidden-phone"></div>
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+				</li>
+				<li>
+
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+					<form class="sidebar-search" action="extra_search.html" method="POST">
+						<div class="form-container">
+							<div class="input-box">
+								<a href="javascript:;" class="remove"></a>
+								<input type="text" placeholder="جستجو..."/>
+								<input type="button" class="submit" value=" "/>
+							</div>
+						</div>
+					</form>
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+				</li>
+				<li class="start">
+					<a href="/user">
+					<i class="fa fa-home"></i>
+					<span class="title"> داشبورد </span>
+					</a>
+				</li>
+
+				<li class="tooltips">
+					<a href="/user/bill">
+					<i class="fa fa-list-alt"></i>
+					<span class="title"> صورت حساب </span>
+
+
+					</a>
+				</li>
+
+				<li class="tooltips active">
+					<a href="#">
+					<i class="fa fa-list"></i>
+					<span class="title"> ریز مصرف  </span>
+                    <span class="selected"></span>
+					</a>
+				</li>
+
+				<li class="tooltips">
+					<a href="/user/registerbuy">
+					<i class="fa fa-shopping-cart"></i>
+					<span class="title"> ثبت خرید </span>
+
+					</a>
+				</li>
+
+                <li class="tooltips">
+					<a href="/user/note">
+					<i class="fa fa-comment"></i>
+					<span class="title">یادداشت ها</span>
+					</a>
+				</li>
+
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+
+		{% end block sidbar %}
+{% block content %}
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="row">
+				<div class="col-md-12">
+
+					<ul class="page-breadcrumb breadcrumb">
+
+						<li>
+							<i class="fa fa-angle-left"></i>
+							<a href="/user"> داشبورد </a></li>
+						<li class="pull-right">
+                        <li>
+							<i class="fa fa-angle-left"></i>
+							<a href="#"> ریز مصرف </a></li>
+						<li class="pull-right">
+
+								<i class="fa fa-calendar"></i>
+								<span>{{date}}</span>
+						</li>
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<div class="row">
+                 <div class="col-md-12">
+                                <table id="user" class="table table-bordered table-striped">
+                                    <tbody>
+                                    <tr>
+                                        <td style="width:4%">کد تراکنش</td>
+                                        <td style="width:4%">تاریخ</td>
+                                        <td style="width:4%">کالا</td>
+                                        <td style="width:4%">مبلغ</td>
+                                        <td style="width:15%">مشترکین در تراکنش</td>
+                                    </tr>
+                                    {% for item in list_buy %}
+                                    <tr>
+                                        <td>{{item['id']}}</td>
+                                        <td>{{item['date']}}</td>
+                                        <td>{{item['concern']}}</td>
+                                        <td>{{item['amount']}}</td>
+                                        <td>{% for j in item['list_user'] %}{{ j + " / " }}{% end %}</td>
+
+                                    </tr>
+                                    {% end for %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+			</div>
+            <div class="col-md-3 col-md-offset-4">
+        <ul class="pagination">
+
+            <li><a href="{{ reverse_url("admin_tinyconsumption", 1) }}">&laquo;</a></li>
+
+            {% for i in range(pagination['total'] // 5) %}
+            <li {% if pagination['current_page'] == i  %}class="active"{% end %}><a href="{{ reverse_url("admin_tinyconsumption", (i+1)) }}">{{ i + 1 }}</a></li>
+            {% end %}
+
+            <li><a href="{{ reverse_url("admin_tinyconsumption", pagination['total'] // 5) }}">&raquo;</a></li>
+
+        </ul>
+    </div>
+
+			</div>
+
+		</div>
+	{% end block content %}
