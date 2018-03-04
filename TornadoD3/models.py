@@ -36,7 +36,7 @@ class Payment(MySQLModel):
     type = peewee.BooleanField()
     payer_id = peewee.IntegerField()
     date = peewee.DateField()
-    User = peewee.ForeignKeyField(rel_model=User, to_field=User.id)
+    User = peewee.ForeignKeyField(User, to_field=User.id)
 
 
 class Buy(MySQLModel):
@@ -53,7 +53,7 @@ class Note(MySQLModel):
     date = peewee.DateField()
     title = peewee.CharField()
     text = peewee.CharField()
-    User = peewee.ForeignKeyField(rel_model=User, to_field=User.id)
+    User = peewee.ForeignKeyField(User, to_field=User.id)
 
 
 class Message(MySQLModel):
@@ -63,11 +63,11 @@ class Message(MySQLModel):
     date = peewee.DateField()
     date_buy = peewee.DateField()
     status = peewee.BooleanField()
-    User = peewee.ForeignKeyField(rel_model=User, to_field=User.id)
+    User = peewee.ForeignKeyField(User, to_field=User.id)
 
 
 class User_has_buy(MySQLModel):
     id = peewee.PrimaryKeyField()
-    User = peewee.ForeignKeyField(rel_model=User, to_field=User.id)
-    Buy = peewee.ForeignKeyField(rel_model=Buy, to_field=Buy.id)
+    User = peewee.ForeignKeyField(User, to_field=User.id)
+    Buy = peewee.ForeignKeyField(Buy, to_field=Buy.id)
 
